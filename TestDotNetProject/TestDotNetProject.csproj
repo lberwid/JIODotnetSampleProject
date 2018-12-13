@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{15854FA6-9564-46CE-8CE7-1BC4F5E7F905}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TestDotNetProject</RootNamespace>
+    <AssemblyName>TestDotNetProject</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Arrays\ArrayClass.cs" />
+    <Compile Include="Arrays\GenericArrayClass.cs" />
+    <Compile Include="ConstructorClass.cs" />
+    <Compile Include="Delegate.cs" />
+    <Compile Include="Events\AlarmClock.cs" />
+    <Compile Include="Events\AlarmEventArgs.cs" />
+    <Compile Include="Events\AlarmEventHandler.cs" />
+    <Compile Include="GenericClass.cs" />
+    <Compile Include="Generics\ClassUsingCollections.cs" />
+    <Compile Include="Generics\ClassWithGenericParameter.cs" />
+    <Compile Include="InterfaceTest\ClassImplementingInterface.cs" />
+    <Compile Include="InterfaceTest\ClassWithInterfaceField.cs" />
+    <Compile Include="InterfaceTest\Interface.cs" />
+    <Compile Include="RefOutTest.cs" />
+    <Compile Include="StructTest\ClassHandlingStruct.cs" />
+    <Compile Include="StructTest\Struct.cs" />
+    <Compile Include="TestEnum.cs" />
+    <Compile Include="FieldClass.cs" />
+    <Compile Include="InstanceClass.cs" />
+    <Compile Include="PropertyClass.cs" />
+    <Compile Include="Static\StaticClass.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
